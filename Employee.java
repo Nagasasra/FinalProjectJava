@@ -7,7 +7,7 @@ public class Employee extends Person implements Work {
     }
 
     @Override
-    public String getType() {
+    public String getType() {// is this a student, teacher, or employee?
         return "Employee";
     }
 

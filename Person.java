@@ -1,5 +1,6 @@
 package FinalProject;
 
+// Student, Teacher, and Employee class are subclasses of this
 abstract public class Person {
     private String name;
     private String email;

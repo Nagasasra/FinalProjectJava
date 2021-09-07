@@ -3,8 +3,8 @@ package FinalProject;
 import java.util.ArrayList;
 
 public class Student extends Person {
-    private Major major;
-    private ArrayList<Grade> scores;
+    private Major major;// every student is registered in one major
+    private ArrayList<Grade> scores;// list of courses and its scores
 
     public Student(String name, String email, Major major) {
         super(name, email);
@@ -17,9 +17,11 @@ public class Student extends Person {
     public ArrayList<Grade> getScores() {
         return scores;
     }
+    // add new score to a student (to be utilized by Teacher)
     public void addGrade(int score, String course) {
         scores.add(new Grade(score, course));
     }
+    // get average score for this student
     public double getAvgGrade() {
         double sum = 0;
         if (getScores().size() == 0) {
@@ -32,7 +34,7 @@ public class Student extends Person {
     }
 
     @Override
-    public String getType() {
+    public String getType() {// is this a student, teacher, or employee?
         return "Student";
     }
     @Override

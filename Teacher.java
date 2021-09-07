@@ -3,7 +3,7 @@ package FinalProject;
 import java.util.ArrayList;
 
 public class Teacher extends Person implements Work {
-    private ArrayList<Major> majors;
+    private ArrayList<Major> majors;// list of majors the teacher is teaching
 
     public Teacher(String name, String email) {
         super(name, email);
@@ -11,7 +11,7 @@ public class Teacher extends Person implements Work {
     }
 
     @Override
-    public String getType() {
+    public String getType() {// is this a student, teacher, or employee?
         return "Teacher";
     }
 
@@ -21,6 +21,7 @@ public class Teacher extends Person implements Work {
     public void addMajor(Major major) {
         majors.add(major);
     }
+    // giving score to a student
     public void giveScore(Student student, int score, String course) {
         student.addGrade(score, course);
     }

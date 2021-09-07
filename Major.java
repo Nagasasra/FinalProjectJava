@@ -1,9 +1,9 @@
 package FinalProject;
 
 public class Major {
-    private String name;
-    private String code;
-    static int HowManyMajors=0;
+    private String name;// name of the major
+    private String code;// the code for the major
+    static int HowManyMajors=0;// how many majors are there in this school? will be added every time a new major is created
 
     public Major(String name, String code) {
         this.name = name;

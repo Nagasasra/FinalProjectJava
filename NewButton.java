@@ -7,11 +7,10 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-// a lot of the code in this class are taken from https://www.tutorialspoint.com/how-can-we-add-insert-a-jbutton-to-jtable-cell-in-java
-
+// a custom button class to be used inside table and make it clickable
 class NewButton extends JButton {
-    private String code;
-    private String forWhat;
+    private String code;// this is the email of said person (useful for finding the information of the right person)
+    private String forWhat;// this is the purpose of the button (is this button to view scores? view salary? etc.)
 
     public NewButton(String text, String code, String forWhat) {
         super(text);
@@ -27,6 +26,7 @@ class NewButton extends JButton {
     }
 }
 
+// a lot of the code in these classes are taken from https://www.tutorialspoint.com/how-can-we-add-insert-a-jbutton-to-jtable-cell-in-java
 class JTableButtonRenderer implements TableCellRenderer {
     private TableCellRenderer defaultRenderer;
     public JTableButtonRenderer(TableCellRenderer renderer) {
